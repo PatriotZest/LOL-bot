@@ -41,6 +41,18 @@ client.on('ready', () => {
     client.user.setActivity(`with your mom`)
 });
 
+client.on('message', async message=>{
+    let blacklisted = ['bruh','Bruh','BRUH','Bruh!','BRUH!','bruh!','bruh!!','BRUH!!','Bruh!!','BRUH!!!'];
+    let foundInText = false;
+    for(i in blacklisted){
+        if(message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    if(foundInText){
+        const hello = message.mentions.users.first();
+        message.channel.send("moment")
+    }
+});
+
 
 let stats = {
     serverID: '<ID>',
