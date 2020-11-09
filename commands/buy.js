@@ -11,17 +11,23 @@ module.exports = {
         let items = await db.fetch(message.author.id, { items: [] });
         let amount = await db.fetch(`money_${message.guild.id}_${message.author.id}`)
 
-        if(purchase === 'car' || 'Car'){
-            if(amount < 500) return message.channel.send('You do not have enough money to buy this item. Please try another one');
-            db.subtract(`money_${message.guild.id}_${message.author.id}`, 500);
-            db.push(message.author.id, "Car");
-            message.channel.send('Successfully bought one car')
+        if(purchase === 'crown' || 'Crown'){
+            if(amount < 600000) return message.channel.send('You do not have enough money to buy this item. Please try another one');
+            db.subtract(`money_${message.guild.id}_${message.author.id}`, 600000);
+            db.push(message.author.id, "Crown");
+            message.channel.send('Successfully bought one Crown')
         }
-        if(purchase === 'watch' || 'Watch'){
-            if(amount < 250) return message.channel.send('You do not have enough money to buy this item. Please try another one');
-            db.subtract(`money_${message.guild.id}_${message.author.id}`, 250);
-            db.push(message.author.id, "Watch");
-            message.channel.send('Successfully bought one car')
+        if(purchase === 'pink phallic Object' || 'Pink Phallic Object' || 'pink'){
+            if(amount < 15) return message.channel.send('You do not have enough money to buy this item. Please try another one');
+            db.subtract(`money_${message.guild.id}_${message.author.id}`, 15);
+            db.push(message.author.id, "Pink Phallic Object");
+            message.channel.send('Successfully bought one Pink Phallic Object')
+        }
+        if(purchase === 'Zesty lime' || 'zest'|| 'zest lime'){
+            if(amount < 1250) return message.channel.send('You do not have enough money to buy this item. Please try another one');
+            db.subtract(`money_${message.guild.id}_${message.author.id}`, 1250);
+            db.push(message.author.id, "Zesty lime");
+            message.channel.send('Successfully bought one Zesty lime')
         }
     }
 }
