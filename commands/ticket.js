@@ -25,6 +25,7 @@ const registerEvent = (client) => {
 }
 
 module.exports = {
+     async run(client, message , args){
   commands: ['ticket', 'support'],
   minArgs: 1,
   expectedArgs: '<message>',
@@ -49,4 +50,5 @@ Click the ${check} icon when this issue has been resolved.`
         )
       })
   },
+  }
 }
