@@ -15,5 +15,5 @@ module.exports{
         .then(textMessage =>{
             message.react(check)
         })
-    },
+    }
 }
