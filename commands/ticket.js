@@ -1,6 +1,6 @@
 ﻿const channelId = '775302318564442132'
 const check = '✅'
-module.exports{
+module.exports = {
     commands: ['ticket','support'],
     minArgs: 1,
     expectedArgs: '<message>',
@@ -15,5 +15,5 @@ module.exports{
         .then(textMessage =>{
             message.react(check)
         })
-    }
+    },
 }
