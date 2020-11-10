@@ -26,10 +26,12 @@ const registerEvent = (client) => {
 
 module.exports = {
      async run(client, message , args){
-  commands: ['ticket', 'support'],
-  minArgs: 1,
-  expectedArgs: '<message>',
-  callback: (userMessage, arguments, text, client) => {
+      name: 'ticket',
+      description: "makes a ticket",
+      commands: ['ticket', 'support'],
+      minArgs: 1,
+      expectedArgs: '<message>',
+     callback: (userMessage, arguments, text, client) => {
     const { guild, member } = userMessage
 
     registerEvent(client)
